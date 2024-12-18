@@ -58,7 +58,7 @@ I am seeking a PhD position.
 </div>
 
 
-- ``Preprint`` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
+- `ICASSP2023` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
 
 
 # 🎖 Honors and Awards
