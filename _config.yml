@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Shaozhe Liu"
-description              : # "China Merchant Bank."
+description              : "Man proposes，God disposes."
 repository               : "shaozheliu/shaozheliu.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Shaozhe Liu"
   avatar           : "images/lsz.png"
-  bio              : "Man proposes，God disposes."
+  bio              : "China Merchant Bank"
   location         : "Shenzhen, China"
   employer         :
   pubmed           : 
