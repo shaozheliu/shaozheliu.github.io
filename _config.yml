@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Shaozhe Liu"
-description              : "China Merchant Bank."
+description              : # "China Merchant Bank."
 repository               : "shaozheliu/shaozheliu.github.io"
 google_scholar_stats_use_cdn : true
 
