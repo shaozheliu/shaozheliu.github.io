@@ -19,7 +19,7 @@ redirect_from:
 
 I am a graduate student from the Academy of Advanced Interdisciplinary Studies at Peking University, specializing in Data Science.
 
-My research interest includes Human-computer interaction, applied AI/ML, and health applicationis using Physiological time series data.
+My research interest includes Human-computer interaction, applied AI/ML, and health applications using Physiological time series data.
 
 I am seeking a PhD position.
 
@@ -27,9 +27,9 @@ I am seeking a PhD position.
 - *2024.12*: &nbsp;🎉🎉 One paper is accepted by ICASSP 2025 
 - *2023.06*: &nbsp;🎉🎉 One paper is accepted by IJCAI-workshop 2024
 - *2023.05*: &nbsp;🎉🎉 One paper is accepted by SMC 2023
+
+
 # 📝 Publications 
-
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/paperfigs/ICASSP25MDD.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -43,18 +43,6 @@ I am seeking a PhD position.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div></div></div>
-<div class='paper-box-text' markdown="1">
-
-[GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models]()
-
-**Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
-
-[//]: # ([****]&#40;https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC&#41; <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>)
-
-[//]: # (- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. )
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SMC 2023</div><img src='images/paperfigs/SMC2023.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -69,6 +57,8 @@ I am seeking a PhD position.
 </div>
 </div>
 
+
+- `ICASSP2023` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
 
 
 # 🎖 Honors and Awards
