@@ -64,12 +64,12 @@ I am seeking a PhD position.
 # 🎖 Honors and Awards
 - *2023.05* Kaggle competition: Density Forecasting, Bronze medal
 - *2021.02* Kaggle competition: American Express-Default Prediction, Gold medal 9th Place. 
-- *2018.09-2021.06* Academic scholarship of Peking University
+- *2018.09 - 2021.06* Academic scholarship of Peking University
 - *2018.06* Zhongnan University of Economics and Law Outstanding Student scholarship.
 
 # 📖 Educations
 - *2018.09 - 2021.06*, Master, Peking University, Beijing. 
-- *2014.09 - 2018.06*, Bachlor, Zhongnan University of Ecnomics and Law, Wuhan. 
+- *2014.09 - 2018.06*, Bachelor, Zhongnan University of Ecnomics and Law, Wuhan. 
 
 [//]: # (# 💬 Invited Talks)
 
