@@ -58,8 +58,11 @@ I am seeking a PhD position.
 </div>
 
 
-- `ICASSP2023` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
-
+- `Preprint` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
+- `Preprint` [Learning Local to Global Spatial-Temporal Representation for Motor Imagery Classification](), **Shaozhe Liu**, Leike An, Xinliang Zhou, Xiaoqun Ning, Ziyu Jia
+- `IJCAI-workshop` [MDDNet: EEG-based Transformer with Domain Adversarial Learning for Major
+Depression Disorder Diagnosis](), **Shaozhe Liu**, Leike An, Ziyu Jia
+- `ICCASIT` [Three-dimensional grid model of airspace resources based on Beidou grid code ](), Ping shu, **Shaozhe Liu**, et al.
 
 # 🎖 Honors and Awards
 - *2023.05* Kaggle competition: Density Forecasting, Bronze medal
