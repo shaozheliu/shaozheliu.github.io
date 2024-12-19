@@ -19,7 +19,7 @@ redirect_from:
 
 I am a graduate student from the Academy of Advanced Interdisciplinary Studies at Peking University, specializing in Data Science.
 
-My research interest includes Human-computer interaction, applied AI/ML, and health applications using Physiological time series data.
+My research interest    includes Human-computer interaction, applied AI/ML, and health applications using Physiological time series data.
 
 I am seeking a PhD position.
 
@@ -60,9 +60,9 @@ I am seeking a PhD position.
 
 - `Preprint` [GaRA: Gated Low-rank Adaptation for Fine-tuning Time-series Foundation Models](), **Shaozhe Liu**, Leike An, Keru Dong, Zhen Li, Wei Zhu
 - `Preprint` [Learning Local to Global Spatial-Temporal Representation for Motor Imagery Classification](), **Shaozhe Liu**, Leike An, Xinliang Zhou, Xiaoqun Ning, Ziyu Jia
-- `IJCAI-workshop` [MDDNet: EEG-based Transformer with Domain Adversarial Learning for Major
+- `IJCAI-workshop 2023` [MDDNet: EEG-based Transformer with Domain Adversarial Learning for Major
 Depression Disorder Diagnosis](), **Shaozhe Liu**, Leike An, Ziyu Jia
-- `ICCASIT` [Three-dimensional grid model of airspace resources based on Beidou grid code ](), Ping shu, **Shaozhe Liu**, et al.
+- `ICCASIT 2021` [Three-dimensional grid model of airspace resources based on Beidou grid code ](), Ping shu, **Shaozhe Liu**, et al.
 
 # 🎖 Honors and Awards
 - *2023.05* Kaggle competition: Density Forecasting, Bronze medal
@@ -80,6 +80,6 @@ Depression Disorder Diagnosis](), **Shaozhe Liu**, Leike An, Ziyu Jia
 
 [//]: # (- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]]&#40;https://github.com/&#41;)
 
-[//]: # (# 💻 Internships)
-
-[//]: # (- *2019.05 - 2020.02*, [Lorem]&#40;https://github.com/&#41;, China.)
+# 💻 Professional Service
+## Conference Reviewer
+- ICASSP / IJCNN
