@@ -6,7 +6,7 @@
    Typography
    ========================================================================== */
 
-$doc-font-size              : 18;
+$doc-font-size              : 20;
 
 /* paragraph indention */
 $paragraph-indent           : false; // true, false (default)
@@ -14,7 +14,8 @@ $indent-var                 : 0.5em;
 
 /* system typefaces */
 $serif                      : Times, Georgia, serif;
-$sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
+//$sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
+$sans-serif                 : Arial, Helvetica, sans-serif;
 // $sans-serif                 : Georgia, serif, sans-serif;
 
 // $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
