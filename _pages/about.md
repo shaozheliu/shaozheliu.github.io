@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 I am a graduate student from the Academy of Advanced Interdisciplinary Studies at Peking University, specializing in Data Science.
-<br>
+
 My research interest includes Human-computer interaction, applied AI/ML, and health applications using Physiological time series data.
 
 I am seeking a PhD position.
