@@ -41,8 +41,6 @@ I am seeking a PhD position.
 
 [Paper]() • [Project Page]() • [Code](https://github.com/shaozheliu/MDD-DAL)
 
-<a href="https://2025.ieeeicassp.org/" style="text-decoration:none;">International Conference on Acoustics, Speech, and Signal Processing(ICASSP), 2025</a>
-
 [//]: # (<span style="color:red;">Oral Presentation</span>)
 
 </div>
@@ -58,8 +56,6 @@ Imagery Classification</a>
 **Shaozhe Liu**, Leike An, Chi Zhang, Ziyu Jia
 
 [Paper](https://github.com/shaozheliu/Reading-Materials/tree/main/Materials/ST-DG) • [Project Page](https://github.com/shaozheliu/Reading-Materials/tree/main/Materials/ST-DG) • [Code](https://github.com/shaozheliu/STDG)
-
-<a href="https://www.ieeesmc.org/conference-2023/" style="text-decoration:none;">International Conference on Systems, Man, and Cybernetics(SMC), 2023</a>
 
 <span style="color:red;">Oral Presentation</span>
 
