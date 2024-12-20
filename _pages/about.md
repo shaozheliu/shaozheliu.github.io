@@ -51,9 +51,10 @@ I am seeking a PhD position.
 
 **Shaozhe Liu**, Leike An, Chi Zhang, Ziyu Jia
 
-[//]: # ([****]&#40;https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC&#41; <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>)
+- [Paper](https://github.com/shaozheliu/Reading-Materials/tree/main/Materials/ST-DG)•[Project Page](https://github.com/shaozheliu/Reading-Materials/tree/main/Materials/ST-DG)•[Code](https://github.com/shaozheliu/STDG)
 
-[//]: # (- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. )
+- <a href="https://www.ieeesmc.org/conference-2023/" style="text-decoration:none;">International Conference on Systems, Man, and Cybernetics(SMC), 2023</a>
+- <span style="color:red;">Oral Presentation</span>
 </div>
 </div>
 
