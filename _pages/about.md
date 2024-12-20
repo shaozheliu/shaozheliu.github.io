@@ -47,7 +47,7 @@ I am seeking a PhD position.
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SMC 2023</div><img src='images/paperfigs/SMC2023.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**A Spatial-Temporal Transformer based on Domain Generalization for Motor Imagery Classification**(<span style="color:red;">CCF-C oral</span>)
+<a href="https://ieeexplore.ieee.org/document/10394657" style="text-decoration:none;">A Domain Adversarial Learning Framework for Major Depression Disorder Diagnosis</a>
 
 **Shaozhe Liu**, Leike An, Chi Zhang, Ziyu Jia
 
