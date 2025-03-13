@@ -37,9 +37,9 @@ My research interests encompass Human-Computer Interaction, Machine Learning, an
 
 [//]: # ([****]&#40;https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC&#41; <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>)
 
-[Paper]() • [Project Page]() • [Code](https://github.com/shaozheliu/MDD-DAL)
+[Paper](https://ieeexplore.ieee.org/document/10890636/) • [Project Page]() • [Code](https://github.com/shaozheliu/MDD-DAL)
 
-[//]: # (<span style="color:red;">Oral Presentation</span>)
+<span style="color:red;">Poster</span>
 
 </div>
 </div>
