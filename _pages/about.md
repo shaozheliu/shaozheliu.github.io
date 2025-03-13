@@ -19,9 +19,7 @@ redirect_from:
 
 I am a graduate student from the Academy of Advanced Interdisciplinary Studies at Peking University, specializing in Data Science.
 
-My research interest includes Human-computer interaction, applied AI/ML, and health applications using Physiological time series data.
-
-I am seeking a PhD position.
+My research interests encompass Human-Computer Interaction, Machine Learning, and health applications utilizing physiological time series data. I am particularly intrigued by the development and construction of multi-agent systems. If my work aligns with your interests, please feel free to reach out to me via email.
 
 # 🔥 News
 - *2024.12*: &nbsp;🎉🎉 One paper is accepted by ICASSP 2025 
@@ -87,4 +85,4 @@ Depression Disorder Diagnosis](), **Shaozhe Liu**, Leike An, Ziyu Jia
 
 # 💻 Professional Service
 ## Conference Reviewer
-- ICASSP / IJCNN
+- ICASSP / IJCNN / SMC / MLSP
