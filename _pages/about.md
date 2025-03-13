@@ -19,7 +19,9 @@ redirect_from:
 
 I am a graduate student from the Academy of Advanced Interdisciplinary Studies at Peking University, specializing in Data Science.
 
-My research interests encompass Human-Computer Interaction, Machine Learning, and health applications utilizing physiological time series data. I am particularly intrigued by the development and construction of multi-agent systems. If my work aligns with your interests, please feel free to reach out to me via email.
+My research interests encompass Human-Computer Interaction, Machine Learning, and health applications utilizing physiological time series data. 
+
+I am particularly intrigued by the development and construction of multi-agent systems. If my work aligns with your interests, please feel free to reach out to me via email.
 
 # 🔥 News
 - *2024.12*: &nbsp;🎉🎉 One paper is accepted by ICASSP 2025 
