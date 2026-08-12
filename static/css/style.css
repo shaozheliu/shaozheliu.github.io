@@ -501,6 +501,34 @@ body {
     background: var(--icon-6-hover-color);
 }
 
+.lang-switch {
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+}
+
+.lang-btn {
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--main-text-color);
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--text-bg-color);
+}
+
+.lang-btn.lang-active {
+    background: var(--purple-text-color);
+    color: #fff;
+}
+
 .tanChiShe {
     width: 85%;
 }
@@ -729,6 +757,114 @@ body {
 
 .highlight-link:hover {
     color: #b0b4f7 !important;
+}
+
+/* Academic profile styles */
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 28px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--text-bg-color);
+    color: var(--main-text-color);
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--project-item-left-text-color);
+    line-height: 1.6;
+}
+
+.news-date {
+    display: inline-block;
+    min-width: 72px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--purple-text-color);
+    margin-right: 8px;
+}
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--text-bg-color);
+}
+
+.pub-item:last-child {
+    border-bottom: none;
+}
+
+.pub-badge {
+    flex-shrink: 0;
+    min-width: 130px;
+    height: 26px;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 4px;
+    background: var(--text-bg-color);
+    color: var(--main-text-color);
+    white-space: nowrap;
+}
+
+.pub-thumb {
+    flex-shrink: 0;
+    width: 120px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--text-bg-color);
+}
+
+.pub-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.pub-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    line-height: 1.5;
+}
+
+.pub-authors {
+    font-size: 13px;
+    color: var(--project-item-left-text-color);
+    line-height: 1.5;
+}
+
+.pub-links {
+    font-size: 13px;
+    color: var(--project-item-left-text-color);
+    margin-top: 2px;
+}
+
+.pub-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+    margin-right: 8px;
 }
 
 .projectList {
