@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello, I'm Shaozhe Liu</title>
+    <title data-i18n="page.title">Hello, I'm Shaozhe Liu</title>
     <link rel="icon" href="favicon.ico?v=20250810">
     <meta name="description" content="Bruce Liu's website">
     <meta name="keywords" content="Shaozhe Liu,Personal_Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./static/css/style.css?v=1.33">
+    <link rel="stylesheet" href="./static/css/style.css?v=1.34">
 
 
     <script>
@@ -46,7 +46,7 @@
                             fill="#2c2c2c" p-id="1480"></path>
                     </svg>
                     <!-- Location label -->
-                    广东 深圳
+                    <span data-i18n="left.location">广东 深圳</span>
                 </div>
                 <div class="left-div-item">
                     <svg t="1705773906032" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -56,14 +56,14 @@
                             fill="#666666" p-id="2475"></path>
                     </svg>
                     <!-- School label -->
-                    北京大学
+                    <span data-i18n="left.school">北京大学</span>
                 </div>
             </div>
             <div class="left-div left-tag">
-                <div class="left-tag-item">音乐达人</div>
-                <div class="left-tag-item">独立开发者</div>
-                <div class="left-tag-item">股市选手</div>
-                <div class="left-tag-item">游泳爱好者</div>
+                <div class="left-tag-item" data-i18n="left.tag1">音乐达人</div>
+                <div class="left-tag-item" data-i18n="left.tag2">独立开发者</div>
+                <div class="left-tag-item" data-i18n="left.tag3">股市选手</div>
+                <div class="left-tag-item" data-i18n="left.tag4">游泳爱好者</div>
                 <!-- <div class="left-tag-item"></div>
                 <div class="left-tag-item">Japanese</div> -->
             </div>
@@ -74,24 +74,24 @@
                     <li>
                         <div class="focus"></div>
                         <div>Future</div>
-                        <div>To be continued</div>
+                        <div data-i18n="left.tl1">To be continued</div>
                     </li>
 
                     <li>
                         <div class="focus"></div>
                         <div>2026-07-10</div>
-                        <div>开启Chords & Keys Cookbook 专项 </div>
+                        <div data-i18n="left.tl2">开启Chords & Keys Cookbook 专项</div>
                     </li>
                     
                     <li>
                         <div class="focus"></div>
                         <div>2026-03-16</div>
-                        <div>Switched to new homepage</div>
+                        <div data-i18n="left.tl3">Switched to new homepage</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>2021-09-20</div>
-                        <div>Built my blog</div>
+                        <div data-i18n="left.tl4">Built my blog</div>
                     </li>
                 </ul>
             </div>
@@ -101,10 +101,10 @@
 
 
         <header>
-            <div class="welcome">Hello, I'm <span class="gradientText">刘劭喆</span></div>
-            <div class="description">👦 <span class="purpleText"> Vibe coding </span> 重度患者
+            <div class="welcome" data-i18n="header.welcome">Hello, I'm <span class="gradientText">刘劭喆</span></div>
+            <div class="description" data-i18n="header.desc1">👦 <span class="purpleText"> Vibe coding </span> 重度患者
             </div>
-            <div class="description">📝 爱我所爱, 行我所行, 听从我心, 
+            <div class="description" data-i18n="header.desc2">📝 爱我所爱, 行我所行, 听从我心, 
                 <span class="purpleText">无问西东</span>
             </div>
             <div class="iconContainer">
@@ -170,6 +170,11 @@
                     </svg>
                 </a> -->
 
+                <!-- language switch (i18n) -->
+                <a class="iconItem" href="javascript:void(0)" style="display:flex;align-items:center;gap:2px;padding:2px;">
+                    <button id="lang-zh" class="lang-btn lang-active" onclick="toggleLang('zh')">中</button>
+                    <button id="lang-en" class="lang-btn" onclick="toggleLang('en')">EN</button>
+                </a>
                 <!-- switch -->
                 <a class="iconItem switch" href="javascript:void(0)">
                 <div class="onoffswitch">
@@ -190,11 +195,12 @@
 
         <!-- Tab buttons -->
         <div class="button-container">
-            <button class="tab-button but-active" onclick="openTab('tab1')">项目清单</button>
-            <button class="tab-button" onclick="openTab('tab2')">个人介绍</button>
-            <button class="tab-button" onclick="openTab('tab3')">FAQ</button>
+            <button class="tab-button but-active" onclick="openTab('tab1')" data-i18n="tab.projects">项目清单</button>
+            <button class="tab-button" onclick="openTab('tab2')" data-i18n="tab.about">个人介绍</button>
+            <button class="tab-button" onclick="openTab('tab3')" data-i18n="tab.faq">FAQ</button>
         </div>
 
+        <!-- ========== Tab1：项目清单 ========== -->
         <div id="tab1" class="tab-content content-active">
             <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -203,94 +209,47 @@
                         d="M629.333333 202.666667v213.333333h277.333334v448h-512v-213.333333h-277.333334v-448h512z m213.333334 277.333333h-213.333334v170.666667h-170.666666v149.333333h384v-320z m-277.333334-213.333333h-384v320h213.333334v-170.666667h170.666666v-149.333333z m0 213.333333h-106.666666v106.666667h106.666666v-106.666667z"
                         fill="#000000" p-id="1892"></path>
                 </svg>
-                开源经验
+                <span data-i18n="proj.opensource">开源经验</span>
             </div>
             <div class="projectList">
-                <!-- 项目列表开始 -->
-                <!---->
-                <!-- <a class="projectItem" target="_blank" href="https://blog.xuxiny.top">
+                <a class="projectItem" target="_blank" href="https://shaozheliu.github.io/chords-keys-cookbook/">
                     <div class="projectItemLeft">
-                        <h1>Blog</h1>
-                        <p>Tech blogs</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="./static/img/blog.svg" alt="">
-                    </div>
-                </a> -->
-
-                <!-- <a class="projectItem" target="_blank" href="https://nav.xuxiny.top">
-                    <div class="projectItemLeft">
-                        <h1>Navigation</h1>
-                        <p>Web collections</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="./static/img/nav.svg" alt="">
-                    </div>
-                </a> -->
-
-                <!-- <a class="projectItem" target="_blank" href="https://time.xuxiny.top">
-                    <div class="projectItemLeft">
-                        <h1>Time Progress</h1>
-                        <p>Progress bar & Count down</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="./static/img/time.svg" alt="">
-                    </div>
-                </a> -->
-
-                <!-- <a class="projectItem" target="_blank" href="https://info.xuxiny.top">
-                    <div class="projectItemLeft">
-                        <h1>Browsing Info</h1>
-                        <p>Check your browswer & system info via UA</p>
-                    </div>
-                    <div class="projectItemRight">
-                        <img src="./static/img/info.svg" alt="">
-                    </div>
-                </a> -->
-
-                <a class="projectItem" target="_blank" href="https://shaozheliu.github.io/chords-keys-handbook/">
-                    <div class="projectItemLeft">
-                        <h1>Chords & Keys Handbook</h1>
-                        <p>钢琴弹唱Handbook — 从和弦到伴奏的系统指南</p>
+                        <h1>Chords & Keys Cookbook</h1>
+                        <p data-i18n="proj.chords.desc">钢琴弹唱 Cookbook — 从和弦到伴奏的系统指南</p>
                     </div>
                     <div class="projectItemRight">
                         <img src="./static/img/music.svg" alt="">
                     </div>
                 </a>
-
-                <!---->
             </div>
-           <div class="title">
+            <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
                     <path
                         d="M629.333333 202.666667v213.333333h277.333334v448h-512v-213.333333h-277.333334v-448h512z m213.333334 277.333333h-213.333334v170.666667h-170.666666v149.333333h384v-320z m-277.333334-213.333333h-384v320h213.333334v-170.666667h170.666666v-149.333333z m0 213.333333h-106.666666v106.666667h106.666666v-106.666667z"
                         fill="#000000" p-id="1892"></path>
                 </svg>
-                产品清单
+                <span data-i18n="proj.products">产品清单</span>
             </div>
             <div class="projectList">
-                <!-- 项目列表开始 -->
                 <a class="projectItem" target="_blank" href="https://github.com/xxynet/NCM-Downloader">
                     <div class="projectItemLeft">
                         <h1>ZQuant</h1>
-                        <p>A powerful NCM Donwloader that supports built-in metadata</p>
+                        <p data-i18n="proj.zquant.desc">A powerful NCM Donwloader that supports built-in metadata</p>
                     </div>
                     <div class="projectItemRight">
                         <img src="./static/img/music.svg" alt="">
                     </div>
                 </a>
-
                 <a class="projectItem" target="_blank" href="https://github.com/xxynet/HomePage">
                     <div class="projectItemLeft">
                         <h1>HomePage</h1>
-                        <p>An elegant personal honepage</p>
+                        <p data-i18n="proj.homepage.desc">An elegant personal honepage</p>
                     </div>
                     <div class="projectItemRight">
                         <img src="./static/img/home.svg" alt="">
                     </div>
                 </a>
-
                 <a class="projectItem" target="_blank" href="https://github.com/xxynet/KiraAI">
                     <div class="projectItemLeft">
                         <h1>KiraAI</h1>
@@ -300,17 +259,15 @@
                         <img src="./static/img/star.svg" alt="">
                     </div>
                 </a>
-
                 <a class="projectItem" target="_blank" href="https://github.com/xxynet/device-status">
                     <div class="projectItemLeft">
                         <h1>device-status</h1>
-                        <p>An elegant web page that displays your devices' status</p>
+                        <p data-i18n="proj.device.desc">An elegant web page that displays your devices' status</p>
                     </div>
                     <div class="projectItemRight">
                         <img src="./static/img/info.svg" alt="">
                     </div>
                 </a>
-                <!---->
             </div>
             <div class="title">
                 <svg t="1705257823317" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -319,15 +276,15 @@
                         d="M395.765333 586.570667h-171.733333c-22.421333 0-37.888-22.442667-29.909333-43.381334L364.768 95.274667A32 32 0 0 1 394.666667 74.666667h287.957333c22.72 0 38.208 23.018667 29.632 44.064l-99.36 243.882666h187.050667c27.509333 0 42.186667 32.426667 24.042666 53.098667l-458.602666 522.56c-22.293333 25.408-63.626667 3.392-54.976-29.28l85.354666-322.421333zM416.714667 138.666667L270.453333 522.581333h166.869334a32 32 0 0 1 30.933333 40.181334l-61.130667 230.954666 322.176-367.114666H565.312c-22.72 0-38.208-23.018667-29.632-44.064l99.36-243.882667H416.714667z"
                         fill="#000000" p-id="7834"></path>
                 </svg>
-                Skills
+                <span data-i18n="proj.skills">Skills</span>
             </div>
             <div class="skill">
-                <!-- 前往https://skillicons.dev/ 生成，一个pc端，一个移动端，区别是一行的个数 -->
                 <img id="skillPc" src="./static/svg/skillPc.svg" alt="" srcset="">
                 <img id="skillWap" src="./static/svg/skillWap.svg" alt="" srcset="">
             </div>
         </div>
 
+        <!-- ========== Tab2：个人介绍 ========== -->
         <div id="tab2" class="tab-content">
             <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -339,31 +296,127 @@
                         d="M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
                         fill="#000000" p-id="1893"></path>
                 </svg>
-                Introduction
+                <span data-i18n="about.abtme">About Me</span>
             </div>
             <div class="intro-content">
-                <p>Hi, I'm Caleb, really into tech & language, exploring various fields. i...</p>
+                <p data-i18n="about.bio">
+                    Graduate student from the Academy of Advanced Interdisciplinary Studies at <strong>Peking University</strong>, specializing in Data Science.
+                    My research interests encompass <span class="highlight-text">Human-Computer Interaction</span>, <span class="highlight-text">Machine Learning</span>, and health applications utilizing physiological time series data.
+                    I am particularly intrigued by the development and construction of multi-agent systems. If my work aligns with your interests, feel free to reach out via <a class="highlight-link" href="mailto:liushaozhe@pku.org.cn">email</a>.
+                </p>
 
-                <ul class="intro-ul">
-                    <li>create easy-to-use software</li>
-                    <li>make open source projects on <a class="highlight-link" target="_blank" href="https://github.com/xxynet">Github</a></li>
-                    <li>wanna learn photography & editing</li>
-                    <li>am learning foregin languages</li>
+                <h3 class="section-title" data-i18n="about.news">News</h3>
+                <ul class="news-list">
+                    <li><span class="news-date">2025.12</span> <span data-i18n="about.news1">Three papers are accepted by ICASSP 2026</span></li>
+                    <li><span class="news-date">2024.12</span> <span data-i18n="about.news2">One paper is accepted by ICASSP 2025</span></li>
+                    <li><span class="news-date">2023.06</span> <span data-i18n="about.news3">One paper is accepted by IJCAI-workshop 2024</span></li>
+                    <li><span class="news-date">2023.05</span> <span data-i18n="about.news4">One paper is accepted by SMC 2023</span></li>
                 </ul>
 
-                <h3>MY INTERESTS</h3>
-                <ul class="intro-ul">
-                    <li>web development</li>
-                    <li>coding in Python</li>
-                    <li>artificial intelligence</li>
-                    <li>language learning</li>
+                <h3 class="section-title" data-i18n="about.pub">Publications</h3>
+                <ul class="pub-list">
+
+                    <li class="pub-item">
+                        <div class="pub-badge">ICASSP 2026</div>
+                        <img class="pub-thumb" src="./static/img/paperfigs/GaRA2026.png" alt="GARA">
+                        <div class="pub-info">
+                            <span class="pub-title">GARA: Gated Low-Rank Adaptation for Fine-Tuning Time-Series Foundation Models</span>
+                            <span class="pub-authors">Leike An, Zhen Li, Shuai Chen, Chaoqun Rao, Linlin Zhang, Tao Tao, Wei Zhu, <strong>Shaozhe Liu</strong></span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">ICASSP 2026</div>
+                        <div class="pub-info">
+                            <span class="pub-title">Hierarchical Voting Decoder for Resolving Knowledge Conflicts</span>
+                            <span class="pub-authors">Leike An, Shuai Chen, Zhen Li, Kun Wu, Shan Yang, Xiangyu Pei, Jibin Wang, <strong>Shaozhe Liu</strong></span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">ICASSP 2026</div>
+                        <div class="pub-info">
+                            <span class="pub-title">G4CDR: A 4D GEOSOT Grid-Graph for Real-Time UAV Conflict Detection and Resolution</span>
+                            <span class="pub-authors">Leike An, Lin Wang, Keru Dong, Zhen Li, Jian Yu, <strong>Shaozhe Liu</strong>, Jiaxi Wang, Xinming Wang</span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">ICASSP 2025</div>
+                        <img class="pub-thumb" src="./static/img/paperfigs/ICASSP25MDD.png" alt="ICASSP25MDD">
+                        <div class="pub-info">
+                            <span class="pub-title">A Domain Adversarial Learning Framework for Major Depression Disorder Diagnosis</span>
+                            <span class="pub-authors"><strong>Shaozhe Liu</strong>, Leike An, Ziyu Jia</span>
+                            <span class="pub-links">
+                                <span class="pub-tag">Poster</span>
+                                <a class="highlight-link" target="_blank" href="https://ieeexplore.ieee.org/document/10890636/">Paper</a>
+                                ·
+                                <a class="highlight-link" target="_blank" href="https://github.com/shaozheliu/MDD-DAL">Code</a>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">SMC 2023</div>
+                        <img class="pub-thumb" src="./static/img/paperfigs/SMC2023.png" alt="SMC2023">
+                        <div class="pub-info">
+                            <span class="pub-title">A Spatial-Temporal Transformer based on Domain Generalization for Motor Imagery Classification</span>
+                            <span class="pub-authors"><strong>Shaozhe Liu</strong>, Leike An, Chi Zhang, Ziyu Jia</span>
+                            <span class="pub-links">
+                                <span class="pub-tag">Oral</span>
+                                <a class="highlight-link" target="_blank" href="https://ieeexplore.ieee.org/document/10394657">Paper</a>
+                                ·
+                                <a class="highlight-link" target="_blank" href="https://github.com/shaozheliu/STDG">Code</a>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">Preprint</div>
+                        <div class="pub-info">
+                            <span class="pub-title">Learning Local to Global Spatial-Temporal Representation for Motor Imagery Classification</span>
+                            <span class="pub-authors"><strong>Shaozhe Liu</strong>, Leike An, Xinliang Zhou, Xiaoqun Ning, Ziyu Jia</span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">IJCAI-ws 2023</div>
+                        <div class="pub-info">
+                            <span class="pub-title">MDDNet: EEG-based Transformer with Domain Adversarial Learning for Major Depression Disorder Diagnosis</span>
+                            <span class="pub-authors"><strong>Shaozhe Liu</strong>, Leike An, Ziyu Jia</span>
+                        </div>
+                    </li>
+
+                    <li class="pub-item">
+                        <div class="pub-badge">ICCASIT 2021</div>
+                        <div class="pub-info">
+                            <span class="pub-title">Three-dimensional Grid Model of Airspace Resources Based on Beidou Grid Code</span>
+                            <span class="pub-authors">Ping Shu, <strong>Shaozhe Liu</strong>, et al.</span>
+                        </div>
+                    </li>
+
                 </ul>
 
-                <h3>LANGUAGE PROFICIENCY</h3>
-                <P>Native fluency of <span class="highlight-text">Chinese/中文</span>, understanding <span class="highlight-text">English</span> (speaking sucks tho) and a little bit of <span class="highlight-text">Japanese/日本語</span></P>
+                <!-- <h3 class="section-title" data-i18n="about.honors">Honors &amp; Awards</h3>
+                <ul class="intro-ul">
+                    <li><span class="news-date">2023.05</span> <span data-i18n="about.honor1">Kaggle: Density Forecasting — Bronze Medal</span></li>
+                    <li><span class="news-date">2021.02</span> <span data-i18n="about.honor2">Kaggle: American Express Default Prediction — Gold Medal (9th Place)</span></li>
+                    <li><span class="news-date">2018 – 2021</span> <span data-i18n="about.honor3">Academic Scholarship, Peking University</span></li>
+                    <li><span class="news-date">2018.06</span> <span data-i18n="about.honor4">Outstanding Student Scholarship, Zhongnan University of Economics and Law</span></li>
+                </ul> -->
+
+                <h3 class="section-title" data-i18n="about.edu">Education</h3>
+                <ul class="intro-ul">
+                    <li><span class="news-date">2018 – 2021</span> <span data-i18n="about.edu1">M.Sc. in Data Science, Peking University, Beijing</span></li>
+                    <li><span class="news-date">2014 – 2018</span> <span data-i18n="about.edu2">B.Eng., Zhongnan University of Economics and Law, Wuhan</span></li>
+                </ul>
+
+                <h3 class="section-title" data-i18n="about.service">Professional Service</h3>
+                <p data-i18n="about.svc.desc"><strong>Conference Reviewer:</strong> ICASSP · IJCNN · SMC · MLSP</p>
             </div>
         </div>
 
+        <!-- ========== Tab3：FAQ ========== -->
         <div id="tab3" class="tab-content">
             <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -375,62 +428,50 @@
                         d="M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
                         fill="#000000" p-id="1893"></path>
                 </svg>
-                FAQ
+                <span data-i18n="faq.title">FAQ</span>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>When did you start programming?</span>
+                        <span data-i18n="faq.q1">When did you start programming?</span>
                         <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="currentColor" d="M7 10l5 5 5-5z"/>
                         </svg>
                     </div>
                     <div class="faq-answer">
-                        <p>I started programming with <span class="highlight-text">Scratch</span> when i was in elementary school (unfortunately all the projects i had made got lost :(. and learned <span class="highlight-text">Python</span> & <span class="highlight-text">Frontend</span> during the summer vacation before entering middle school. deployed my first ever website on Sep. 20 2021 (it was a blog)</p>
+                        <p data-i18n="faq.a1">I started programming with <span class="highlight-text">Scratch</span> when i was in elementary school (unfortunately all the projects i had made got lost :(. and learned <span class="highlight-text">Python</span> &amp; <span class="highlight-text">Frontend</span> during the summer vacation before entering middle school. deployed my first ever website on Sep. 20 2021 (it was a blog)</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How can I contact you?</span>
+                        <span data-i18n="faq.q2">How can I contact you?</span>
                         <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="currentColor" d="M7 10l5 5 5-5z"/>
                         </svg>
                     </div>
                     <div class="faq-answer">
-                        <p>You can reach me through GitHub and Email</p>
+                        <p data-i18n="faq.a2">You can reach me through GitHub and Email</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How did you fall into the rabbit hole of language learning?</span>
+                        <span data-i18n="faq.q3">How did you fall into the rabbit hole of language learning?</span>
                         <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="currentColor" d="M7 10l5 5 5-5z"/>
                         </svg>
                     </div>
                     <div class="faq-answer">
-                        <p>inspired by <a class="highlight-link" target="_blank" href="https://www.bilibili.com/video/BV1ns4y1A7fj/">this vid</a> & yt vids related to comprehensible input</p>
+                        <p data-i18n="faq.a3">inspired by <a class="highlight-link" target="_blank" href="https://www.bilibili.com/video/BV1ns4y1A7fj/">this vid</a> &amp; yt vids related to comprehensible input</p>
                     </div>
                 </div>
-
-                <!-- <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What languages can you speak?</span>
-                        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
-                            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
-                        </svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p>I'm a native Chinese speaker, I can understand English well (though my speaking needs improvement), and I'm learning Japanese. I'm passionate about language learning and cultural exchange.</p>
-                    </div>
-                </div> -->
             </div>
         </div>
 
         <footer>
-            © 2024-2025 Caleb XXY &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="https://github.com/xxynet/HomePage" target="_blank" class="footer-links">SourceCode</a>
+            <span data-i18n="footer.copy">© 2024-2025 Caleb XXY</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/xxynet/HomePage" target="_blank" class="footer-links" data-i18n="footer.source">SourceCode</a>
         </footer>
 
     </div>
@@ -451,7 +492,8 @@
     </div>
 </div>
 
-<script src="./static/js/script.js?v=1.33"> </script>
+<script src="./static/js/script.js?v=1.35"> </script>
+<script src="./static/js/i18n.js?v=1.0"> </script>
 
 </body>
 
