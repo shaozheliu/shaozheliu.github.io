@@ -1,225 +1,247 @@
-console.log('%cCopyright © 2024-2025 Caleb XXY', 'background-color: #a285e6; color: white; font-size: 24px; font-weight: bold; padding: 10px;');
-console.log('%c   /\\_/\\', 'color: #f7b267; font-size: 20px;');
-console.log('%c  ( o.o )', 'color: #f7b267; font-size: 20px;');
-console.log(' %c  > ^ <', 'color: #f7b267; font-size: 20px;');
-console.log('  %c /  ~ \\', 'color: #f7b267; font-size: 20px;');
-console.log('  %c/______\\', 'color: #f7b267; font-size: 20px;');
-
-
-
-
-document.addEventListener('contextmenu', function(event) {
-  event.preventDefault(); // 阻止默认的上下文菜单行为
-});
-
-
-function openTab(tabName) {
-    // Hide all tab content
-    var tabContents = document.getElementsByClassName('tab-content');
-    for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].classList.remove('content-active');
+(function () {
+    function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+        return match ? decodeURIComponent(match[1]) : null;
     }
-    
-    // Remove active class from all buttons
-    var tabButtons = document.getElementsByClassName('tab-button');
-    for (var i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove('but-active');
-    }
-    
-    // Show the selected tab content
-    document.getElementById(tabName).classList.add('content-active');
-    
-    // Add active class to the clicked button
-    event.target.classList.add('but-active');
-}
-
-
-function toggleClass(selector, className) {
-    var elements = document.querySelectorAll(selector);
-    elements.forEach(function (element) {
-        element.classList.toggle(className);
-    });
-}
-
-function PopUp(imageURL) {
-    var popupMainElement = document.querySelector(".pop-up-img");
-    if (imageURL) {
-        popupMainElement.src = imageURL;
-    }
-    toggleClass(".pop-up-main", "active");
-    toggleClass(".pop-up", "active");
-    toggleClass(".pop-up-close", "active");
-}
-
-function playSound(soundUrl) {
-  const audio = new Audio(soundUrl);
-  audio.play().catch(e => console.error("Failed to play sound effect:", e));
-}
-
-function left() {
-    toggleClass(".left-main", "left-main-open");
-    toggleClass(".left", "left-open");
-
-}
-
-
-document.addEventListener('DOMContentLoaded', function () {
-
-
-    var themeState = getCookie("themeState") || "Light";
-    const htmlTag = document.querySelector('html');
-    var svgItems = document.getElementsByTagName("svg");
-    var tanChiShe = document.getElementById("tanChiShe");
-
-
-
-
-    function changeSvg(color) {
-        for (var i = 0; i < svgItems.length; i++) {
-            var paths = svgItems[i].getElementsByTagName("path");
-            for (var j = 0; j < paths.length; j++) {
-                paths[j].setAttribute("fill", color);
-            }
-        }
-    }
-
-
-
-    function changeTheme(theme) {
-        if (theme == "Dark") {
-            themeState = "Dark";
-            changeSvg("#ffffff");
-            tanChiShe.src = "./static/svg/snake-Dark.svg";
-            htmlTag.dataset.theme = 'dark';
-        } else if (theme == "Light") {
-            themeState = "Light";
-            changeSvg("#000000");
-            tanChiShe.src = "./static/svg/snake-Light.svg";
-            htmlTag.dataset.theme = '';
-        }
-        setCookie("themeState", theme, 365);
-    }
-
-
-
 
     function setCookie(name, value, days) {
-        var expires = "";
+        var expires = '';
         if (days) {
             var date = new Date();
             date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-            expires = "; expires=" + date.toUTCString();
+            expires = '; expires=' + date.toUTCString();
         }
-        document.cookie = name + "=" + value + expires + "; path=/";
+        document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/';
     }
 
-
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            while (cookie.charAt(0) == ' ') {
-                cookie = cookie.substring(1, cookie.length);
-            }
-            if (cookie.indexOf(nameEQ) == 0) {
-                return cookie.substring(nameEQ.length, cookie.length);
-            }
-        }
-        return null;
+    function applyTheme(state) {
+        var isLight = state === 'Light';
+        document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
+        setCookie('themeState', state, 365);
     }
 
+    function initThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
 
-    document.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-            playSound('../static/soundeffects/click.mp3');
+        btn.addEventListener('click', function () {
+            var current = getCookie('themeState') || 'Dark';
+            applyTheme(current === 'Dark' ? 'Light' : 'Dark');
+            drawStars();
         });
-    });
-
-    const switchCheckbox = document.getElementById('myonoffswitch');
-    /*夜间自动打开暗色主题*/
-    const currentTime = new Date();
-    const currentHour = currentTime.getHours();
-    if (currentHour >= 20 || currentHour < 6) {
-        switchCheckbox.checked = false;
-        changeTheme('Dark');
     }
 
+    function initNav() {
+        var links = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+        var sections = links
+            .map(function (link) {
+                var id = link.getAttribute('href');
+                return id && id.charAt(0) === '#' ? document.querySelector(id) : null;
+            })
+            .filter(Boolean);
 
-    switchCheckbox.addEventListener('change', function () {
-
-        if (themeState == "Dark") {
-
-            playSound('../static/soundeffects/light-on.mp3')
-            changeTheme("Light");
-
-        } else if (themeState == "Light") {
-
-            playSound('../static/soundeffects/light-off.mp3')
-            changeTheme("Dark");
+        function setActive() {
+            var scrollY = window.scrollY + 120;
+            var current = sections[0];
+            sections.forEach(function (section) {
+                if (section.offsetTop <= scrollY) current = section;
+            });
+            links.forEach(function (link) {
+                var href = link.getAttribute('href');
+                link.classList.toggle('is-active', current && href === '#' + current.id);
+            });
         }
-    });
 
-    if (themeState == "Dark") {
-        switchCheckbox.checked = false;
+        window.addEventListener('scroll', setActive, { passive: true });
+        setActive();
     }
-    changeTheme(themeState);
 
+    var starCanvas = null;
+    var starCtx = null;
+    var stars = [];
 
+    function resizeStars() {
+        if (!starCanvas) return;
+        var hero = starCanvas.parentElement;
+        var rect = hero.getBoundingClientRect();
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        starCanvas.width = Math.floor(rect.width * dpr);
+        starCanvas.height = Math.floor(rect.height * dpr);
+        starCanvas.style.width = rect.width + 'px';
+        starCanvas.style.height = rect.height + 'px';
+        starCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-
-    /*加载效果*/
-    // var pageLoading = document.querySelector("#PageLoading");
-    // var center = document.getElementById("PageLoading-zyyo-center");
-    // setTimeout(function () {
-    //     pageLoading.style.opacity = '0';
-    //     center.style.height = "500px";
-    //     center.style.width = "500px";
-    //     center.style.opacity = "0";
-    //     pageLoading.style.backgroundSize = "200%";
-    // }, 300);
-
-    // 暂时强制深色模式
-    // changeTheme("Dark")
-
-    /*淡入效果*/
-    var projectItems = document.querySelectorAll(".projectItem");
-    function checkProjectItems() {
-        for (var i = 0; i < projectItems.length; i++) {
-            var projectItem = projectItems[i];
-            var projectItemTop = projectItem.getBoundingClientRect().top;
-
-            if (projectItemTop < window.innerHeight * 1.2) {
-                // projectItem.classList.add("fade-in-visible");
-            }
+        var count = Math.floor((rect.width * rect.height) / 14000);
+        stars = [];
+        for (var i = 0; i < count; i++) {
+            stars.push({
+                x: Math.random() * rect.width,
+                y: Math.random() * rect.height,
+                r: Math.random() < 0.15 ? 1.6 : Math.random() < 0.4 ? 1.1 : 0.7,
+                a: 0.2 + Math.random() * 0.55,
+                blue: Math.random() < 0.28
+            });
         }
+        drawStars();
     }
 
-    window.addEventListener("scroll", checkProjectItems);
-    window.addEventListener("resize", checkProjectItems);
-
-});
-
-// FAQ Toggle Function
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const isActive = faqItem.classList.contains('active');
-
-    playSound('../static/soundeffects/collapsible_open.mp3')
-    
-    // Close all other FAQ items
-    // const allFaqItems = document.querySelectorAll('.faq-item');
-    // allFaqItems.forEach(item => {
-    //     item.classList.remove('active');
-    // });
-
-    // Collapse current FAQ item
-    if (isActive) {
-        faqItem.classList.remove('active');
+    function drawStars() {
+        if (!starCtx || !starCanvas) return;
+        var w = starCanvas.clientWidth;
+        var h = starCanvas.clientHeight;
+        starCtx.clearRect(0, 0, w, h);
+        stars.forEach(function (s) {
+            starCtx.beginPath();
+            starCtx.fillStyle = s.blue
+                ? 'rgba(158, 198, 255,' + s.a + ')'
+                : 'rgba(255, 255, 255,' + s.a + ')';
+            starCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+            starCtx.fill();
+        });
     }
-    
-    // Toggle current FAQ item
-    if (!isActive) {
-        faqItem.classList.add('active');
+
+    function initStars() {
+        starCanvas = document.getElementById('starfield');
+        if (!starCanvas) return;
+        starCtx = starCanvas.getContext('2d');
+        resizeStars();
+        window.addEventListener('resize', resizeStars);
     }
-}
+
+    var PROJECTS = [
+        {
+            title: 'Chords & Keys Cookbook',
+            href: 'https://shaozheliu.github.io/chords-keys-cookbook/#/',
+            desc: '钢琴弹唱 Cookbook，从和弦走到伴奏。',
+            tags: ['音乐', '钢琴'],
+            cover: '#172033',
+            image: './static/img/project-chords.png',
+            icon: './static/img/music.svg',
+            featured: true,
+            visible: true
+        },
+        {
+            title: 'JianYing Editor Skill',
+            href: 'https://github.com/luoluoluo22/jianying-editor-skill',
+            desc: '剪映AI剪辑',
+            tags: ['开源贡献'],
+            cover: '#1A1030',
+            image: './static/img/project-jianying.jpg',
+            featured: true,
+            visible: true
+        },
+        {
+            title: 'KiraAI',
+            href: 'https://github.com/xxynet/KiraAI',
+            desc: '把大模型和社交平台接在一起的多智能体角色。',
+            tags: ['AI', '多智能体'],
+            cover: '#241F14',
+            icon: './static/img/star.svg',
+            featured: true,
+            visible: false
+        },
+        {
+            title: 'ZQuant',
+            href: 'https://github.com/xxynet/NCM-Downloader',
+            desc: '支持写入元数据的 NCM 下载工具。',
+            tags: ['工具', '下载'],
+            cover: '#1A1E2C',
+            icon: './static/img/blog.svg',
+            featured: false,
+            visible: false
+        },
+        {
+            title: 'HomePage',
+            href: 'https://github.com/xxynet/HomePage',
+            desc: '一个干净的个人主页。',
+            tags: ['主页', '开源'],
+            cover: '#241C16',
+            icon: './static/img/home.svg',
+            featured: false,
+            visible: false
+        },
+        {
+            title: 'device-status',
+            href: 'https://github.com/xxynet/device-status',
+            desc: '用来看设备状态的小页面。',
+            tags: ['设备', '状态'],
+            cover: '#142028',
+            icon: './static/img/info.svg',
+            featured: false,
+            visible: false
+        }
+    ];
+
+    function createProjectCard(project) {
+        var card = document.createElement('a');
+        card.className = 'project-card' + (project.featured ? ' project-card--lg' : '');
+        card.href = project.href;
+        card.target = '_blank';
+        card.rel = 'noopener';
+
+        var cover = document.createElement('div');
+        cover.className = 'project-cover';
+        cover.style.setProperty('--cover', project.cover || '#18181B');
+
+        if (project.image) {
+            var shot = document.createElement('img');
+            shot.className = 'project-shot';
+            shot.src = project.image;
+            shot.alt = '';
+            cover.appendChild(shot);
+        } else if (project.icon) {
+            var icon = document.createElement('img');
+            icon.className = 'project-icon';
+            icon.src = project.icon;
+            icon.alt = '';
+            icon.width = project.featured ? 40 : 36;
+            icon.height = project.featured ? 40 : 36;
+            cover.appendChild(icon);
+        }
+
+        if (project.tags && project.tags.length) {
+            var tags = document.createElement('div');
+            tags.className = 'project-tags';
+            project.tags.forEach(function (label) {
+                var tag = document.createElement('span');
+                tag.textContent = label;
+                tags.appendChild(tag);
+            });
+            cover.appendChild(tags);
+        }
+
+        var copy = document.createElement('div');
+        copy.className = 'project-copy';
+        var title = document.createElement('h3');
+        title.textContent = project.title;
+        var desc = document.createElement('p');
+        desc.textContent = project.desc;
+        copy.appendChild(title);
+        copy.appendChild(desc);
+
+        card.appendChild(cover);
+        card.appendChild(copy);
+        return card;
+    }
+
+    function initProjects() {
+        var featured = document.getElementById('project-featured');
+        var gallery = document.getElementById('project-gallery');
+        if (!featured || !gallery) return;
+
+        PROJECTS.forEach(function (project) {
+            if (!project.visible) return;
+            var host = project.featured ? featured : gallery;
+            host.appendChild(createProjectCard(project));
+        });
+
+        gallery.hidden = gallery.children.length === 0;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        initThemeToggle();
+        initNav();
+        initStars();
+        initProjects();
+    });
+})();
