@@ -1,0 +1,60 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "首页" [ref=e4] [cursor=pointer]:
+        - /url: "#home"
+      - navigation "主导航" [ref=e8]:
+        - link "首页" [ref=e9] [cursor=pointer]:
+          - /url: "#home"
+        - link "关于" [ref=e10] [cursor=pointer]:
+          - /url: "#about"
+        - link "项目" [ref=e11] [cursor=pointer]:
+          - /url: "#projects"
+      - button "切换明暗模式" [ref=e12] [cursor=pointer]
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: 独立开发者 · 北京大学
+        - heading "刘劭喆" [level=1] [ref=e21]
+        - heading "Vibe coding 重度患者" [level=2] [ref=e22]
+        - paragraph [ref=e23]: 爱我所爱，行我所行，听从我心，无问西东。
+        - generic [ref=e24]:
+          - link "GitHub" [ref=e25] [cursor=pointer]:
+            - /url: https://github.com/shaozheliu
+          - link "Bilibili" [ref=e26] [cursor=pointer]:
+            - /url: https://space.bilibili.com/626885218
+          - link "小红书" [ref=e27] [cursor=pointer]:
+            - /url: https://www.xiaohongshu.com/user/profile/你的小红书ID
+      - img "刘劭喆" [ref=e29]
+    - generic [ref=e31]:
+      - heading "关于" [level=2] [ref=e32]
+      - generic [ref=e33]:
+        - paragraph [ref=e34]: 毕业于北京大学，当前在金融行业做一个苦逼的打工人。
+        - paragraph [ref=e35]: 我关注人机交互、人工智能。期待在AI时代找到自己的SOP。欢迎沟通交流.
+      - list [ref=e36]:
+        - listitem [ref=e37]: 金融时序数据建模
+        - listitem [ref=e38]: 个人SOP的设计与搭建
+        - listitem [ref=e39]: 把想法做成能用的东西
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - heading "项目" [level=2] [ref=e43]
+        - paragraph [ref=e44]: 我的一些项目，欢迎试用。
+      - generic [ref=e45]:
+        - link "音乐 钢琴 Chords & Keys Cookbook 钢琴弹唱 Cookbook，从和弦走到伴奏。" [ref=e46] [cursor=pointer]:
+          - /url: https://shaozheliu.github.io/chords-keys-cookbook/#/
+          - generic [ref=e48]:
+            - generic [ref=e49]: 音乐
+            - generic [ref=e50]: 钢琴
+          - generic [ref=e51]:
+            - heading "Chords & Keys Cookbook" [level=3] [ref=e52]
+            - paragraph [ref=e53]: 钢琴弹唱 Cookbook，从和弦走到伴奏。
+        - link "开源贡献 JianYing Editor Skill 剪映AI剪辑" [ref=e54] [cursor=pointer]:
+          - /url: https://github.com/luoluoluo22/jianying-editor-skill
+          - generic [ref=e55]: 开源贡献
+          - generic [ref=e58]:
+            - heading "JianYing Editor Skill" [level=3] [ref=e59]
+            - paragraph [ref=e60]: 剪映AI剪辑
+  - contentinfo [ref=e61]:
+    - generic [ref=e62]:
+      - paragraph [ref=e63]: © 2026 刘劭喆
+      - paragraph [ref=e64]: 爱我所爱，行我所行，听从我心，无问西东
